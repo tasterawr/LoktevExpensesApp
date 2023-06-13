@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/layout_bg"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.ExpenseContentFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/moneySpent"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:text="186 руб."
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/categoryLayout"
+        android:layout_below="@id/moneySpent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/category"
+
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:text="Категория: "
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/categoryvalue"
+
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:text="Одежда"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/category"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryLayout"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:text="Дата: "
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateValue"
+
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:text="05.06.2023"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/date"/>
+    </RelativeLayout>
+
+</RelativeLayout>

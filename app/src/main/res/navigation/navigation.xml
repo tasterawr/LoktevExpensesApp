@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/expensesFragment"
+        android:name="com.example.loktevexpensesapp.ui.fragment.ExpensesFragment"
+        android:label="fragment_expenses"
+        tools:layout="@layout/fragment_expenses" >
+        <action
+            android:id="@+id/action_expensesFragment_to_addNewExpenseFragment"
+            app:destination="@id/addNewExpenseFragment" />
+        <action
+            android:id="@+id/action_expensesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewExpenseFragment"
+        android:name="com.example.loktevexpensesapp.ui.fragment.AddNewExpenseFragment"
+        android:label="fragment_add_new_expense"
+        tools:layout="@layout/fragment_add_new_expense" >
+        <action
+            android:id="@+id/action_addNewExpenseFragment_to_expensesFragment"
+            app:destination="@id/expensesFragment" />
+        <action
+            android:id="@+id/action_addNewExpenseFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.loktevexpensesapp.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_expensesFragment"
+            app:destination="@id/expensesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_expenseStatsFragment"
+            app:destination="@id/expenseStatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseStatsFragment"
+        android:name="com.example.loktevexpensesapp.ui.fragment.ExpenseStatsFragment"
+        android:label="fragment_expense_stats"
+        tools:layout="@layout/fragment_expense_stats" >
+        <action
+            android:id="@+id/action_expenseStatsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
